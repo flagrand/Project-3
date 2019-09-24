@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Slab"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./main.css" />
+    <title>Strona główna</title>
+  </head>
+  <body>
+    <div class="nav" id="nav">
+      <p class="menu"><span>MENU</span></p>
+      <a href="" class="nav eles ele1 font1">Article#1</a>
+      <a href="" class="nav eles ele2 font1">Article#2</a>
+      <a href="./main.html" id="ele" class="nav ele0 font1">HOME</a>
+      <a href="" class="nav eles ele3 font1">Article#3</a>
+      <a href="" class="nav eles ele4 font1">Article#4</a>
+    </div>
+    <div class="main">
+      <a
+        href=""
+        class="big b1 bl"
+        style="background-image:url('https://images.unsplash.com/photo-1470694892401-74de0fc8d4e9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80');"
+      >
+      </a>
+      <a
+        href=""
+        class="big b2 br"
+        style="background-image:url('https://images.unsplash.com/photo-1535025287458-e3badca98021?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80');"
+      ></a>
+      <a
+        href=""
+        class="big b3 bl"
+        style="background-image:url('https://images.unsplash.com/photo-1489183988443-b37b7e119ba6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80');"
+      ></a>
+      <a
+        href=""
+        class="big b4 br"
+        style="background-image:url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');"
+      ></a>
+      <div class="small s1 sr">
+        <p class="txt_right font2" id="txt1">
+          Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+          consectetur, adipisci velit. Neque porro quisquam est qui dolorem
+          ipsum quia dolor sit amet, consectetur, adipisci velit. Neque porro
+          quisquam est qui dolorem ipsum quia dolor sit amet, consectetur,
+          adipisci velit.
+        </p>
+      </div>
+      <div class="small s2 sl">
+        <p class="txt_left font2" id="txt2">
+          Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+          consectetur, adipisci velit. Neque porro quisquam est qui dolorem
+          ipsum quia dolor sit amet, consectetur, adipisci velit. Neque porro
+          quisquam est qui dolorem ipsum quia dolor sit amet, consectetur,
+          adipisci velit.
+        </p>
+      </div>
+      <div class="small s3 sr">
+        <p class="txt_right font2" id="txt3">
+          Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+          consectetur, adipisci velit. Neque porro quisquam est qui dolorem
+          ipsum quia dolor sit amet, consectetur, adipisci velit. Neque porro
+          quisquam est qui dolorem ipsum quia dolor sit amet, consectetur,
+          adipisci velit.
+        </p>
+      </div>
+      <div class="small s4 sl">
+        <p class="txt_left font2" id="txt4">
+          Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+          consectetur, adipisci velit. Neque porro quisquam est qui dolorem
+          ipsum quia dolor sit amet, consectetur, adipisci velit. Neque porro
+          quisquam est qui dolorem ipsum quia dolor sit amet, consectetur,
+          adipisci velit.
+        </p>
+      </div>
+    </div>
+    <script>
+      // NAVBAR
+      $(document).ready(function() {
+        $("#nav").hover(
+          function() {
+            $("#nav")
+              .stop()
+              .addClass("wid")
+              .animate({ speed: 10 }, 5000);
+            $(".menu")
+              .stop()
+              .addClass("dntlook")
+              .animate({ speed: 10 }, 5000);
+          },
+          function() {
+            $("#nav")
+              .stop()
+              .removeClass("wid")
+              .animate({ speed: 10 }, 5000);
+            setTimeout(function() {
+              $(".menu")
+                .stop()
+                .removeClass("dntlook")
+                .animate({ opacity: 1.0 }, 500);
+            }, 500);
+          }
+        );
+      });
+
+      $(document).ready(function() {
+        $("#nav").hover(
+          function() {
+            $("#ele")
+              .addClass("look")
+              .animate({ opacity: 1.0 }, 500);
+            $(".eles")
+              .addClass("look")
+              .animate({ opacity: 1.0 }, 500);
+          },
+          function() {
+            $("#ele")
+              .removeClass("look")
+              .animate({ opacity: 0.0 }, 0);
+            $(".eles")
+              .removeClass("look")
+              .animate({ opacity: 0.0 }, 0);
+          }
+        );
+      });
+      // NAVBAR
+
+      $(document).ready(function() {
+        $(".b1").mouseover(function() {
+          $("#txt1")
+            .stop()
+            .animate({ width: 330, height: 168 });
+        });
+        $(".b1").mouseout(function() {
+          $("#txt1")
+            .stop()
+            .animate({ width: 0 });
+        });
+      });
+
+      $(document).ready(function() {
+        $(".b2").mouseover(function() {
+          $("#txt2")
+            .stop()
+            .animate({ width: 330, height: 168 });
+        });
+        $(".b2").mouseout(function() {
+          $("#txt2")
+            .stop()
+            .animate({ width: 0 });
+        });
+      });
+
+      $(document).ready(function() {
+        $(".b3").mouseover(function() {
+          $("#txt3")
+            .stop()
+            .animate({ width: 330, height: 168 });
+        });
+        $(".b3").mouseout(function() {
+          $("#txt3")
+            .stop()
+            .animate({ width: 0 });
+        });
+      });
+
+      $(document).ready(function() {
+        $(".b4").mouseover(function() {
+          $("#txt4")
+            .stop()
+            .animate({ width: 330, height: 168 });
+        });
+        $(".b4").mouseout(function() {
+          $("#txt4")
+            .stop()
+            .animate({ width: 0 });
+        });
+      });
+
+      $(document).ready(function() {
+        $(".txt_right").css({ width: 0 });
+        $(".txt_left").css({ width: 0 });
+      });
+    </script>
+  </body>
+</html>
