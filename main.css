@@ -164,7 +164,7 @@
   overflow: hidden;
   margin: 30px 100px 30px 30px;
   height: 168px;
-  width: 330;
+  width: 330px;
   text-align: left;
 }
 .look {
@@ -180,4 +180,3 @@
   background: rgba(20, 20, 20, 0.849);
   border-radius: 0;
 }
-/* https://codepen.io/maheshambure21/pen/QwXaRw */
